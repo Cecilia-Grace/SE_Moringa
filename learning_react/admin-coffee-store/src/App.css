@@ -1,0 +1,427 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #4b4453;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+  background: #dd86fa;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover{
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   HOME
+========================================= */
+
+.homeView{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #ffffff, #fdf4ff);
+}
+
+.welcome-text,
+.login-welcome-text{
+  background: white;
+  width: 100%;
+  max-width: 750px;
+  padding: 60px 50px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 12px 35px rgba(221,134,250,0.25);
+  border: 3px solid #dd86fa;
+}
+
+.welcome-text h1,
+.login-welcome-text h1{
+  font-size: 3rem;
+  color: #dd86fa;
+  margin-bottom: 20px;
+}
+
+.welcome-text h2,
+.login-welcome-text h2{
+  color: #6b5a73;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.login-welcome-text p{
+  color: #7b7280;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.login-welcome-text button{
+  background: #dd86fa;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-welcome-text button:hover{
+  background: #dd86fa;
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-container{
+  margin-top: 35px;
+}
+
+.login-text{
+  color: #dd86fa;
+  margin-bottom: 20px;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-form input{
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid #dd86fa;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login-form input:focus{
+  border-color: #dd86fa;
+}
+
+.login-form button{
+  background: #dd86fa;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-form button:hover{
+  background: #dd86fa;
+  opacity: 0.9;
+}
+
+/* =========================================
+   SHOP
+========================================= */
+
+.shop-container{
+  padding: 50px 40px;
+}
+
+.shop-heading{
+  text-align: center;
+  color: #dd86fa;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.search-bar{
+  width: 100%;
+  max-width: 450px;
+  display: block;
+  margin: 0 auto 40px auto;
+  padding: 15px;
+  border-radius: 14px;
+  border: 2px solid #dd86fa;
+  outline: none;
+}
+
+.search-bar:focus{
+  border-color: #dd86fa;
+}
+
+/* 3 coffees per row */
+.coffee-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  list-style: none;
+}
+
+.coffee-card{
+  background: white;
+  padding: 25px;
+  border-radius: 24px;
+  border: 2px solid #dd86fa;
+  box-shadow: 0 8px 25px rgba(221,134,250,0.18);
+  transition: 0.3s ease;
+  line-height: 1.8;
+}
+
+.coffee-card:hover{
+  transform: translateY(-5px);
+}
+
+.coffee-card button{
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #dd86fa;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.coffee-card button:hover{
+  background: #dd86fa;
+  opacity: 0.9;
+}
+
+/* =========================================
+   ADMIN PORTAL
+========================================= */
+
+.coffee-container{
+  display: flex;
+  gap: 35px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+/* SIDEBAR FORM */
+
+.coffee-form{
+  width: 320px;
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px rgba(221,134,250,0.2);
+  border: 2px solid #dd86fa;
+
+  position: sticky;
+  top: 100px;
+}
+
+.coffee-form h1{
+  color: #dd86fa;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+
+.coffee-form input{
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  border: 2px solid #dd86fa;
+  outline: none;
+}
+
+.coffee-form input:focus{
+  border-color: #dd86fa;
+}
+
+.coffee-form button{
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #dd86fa;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.coffee-form button:hover{
+  background: #dd86fa;
+  opacity: 0.9;
+}
+
+/* COFFEE LIST RIGHT SIDE */
+
+.coffee-list{
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  list-style: none;
+}
+
+.coffee-list li{
+  background: white;
+  padding: 25px;
+  border-radius: 24px;
+  border: 2px solid #dd86fa;
+  box-shadow: 0 8px 25px rgba(221,134,250,0.18);
+  line-height: 1.8;
+}
+
+.coffee-list button{
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: 2px solid #dd86fa;
+  border-radius: 12px;
+  background: transparent;
+  color: #dd86fa;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.coffee-list button:hover{
+  background: #dd86fa;
+  color: white;
+}
+
+/* =========================================
+   PROTECTED ROUTE
+========================================= */
+
+.auth-text{
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.auth-text h2{
+  color: #dd86fa;
+}
+
+.auth-text a{
+  text-decoration: none;
+  background: #dd86fa;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.auth-text a:hover{
+  background: #dd86fa;
+  opacity: 0.9;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 992px){
+
+  .coffee-grid,
+  .coffee-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coffee-container{
+    flex-direction: column;
+  }
+
+  .coffee-form{
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 768px){
+
+  .welcome-text,
+  .login-welcome-text{
+    padding: 40px 25px;
+  }
+
+  .welcome-text h1,
+  .login-welcome-text h1{
+    font-size: 2.2rem;
+  }
+
+  .coffee-grid,
+  .coffee-list{
+    grid-template-columns: 1fr;
+  }
+
+  .shop-container,
+  .coffee-container{
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .navbar{
+    padding: 15px;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .welcome-text,
+  .login-welcome-text{
+    padding: 30px 20px;
+  }
+
+  .welcome-text h1,
+  .login-welcome-text h1{
+    font-size: 1.8rem;
+  }
+}
