@@ -9,10 +9,16 @@ function Shop() {
         fetchCoffees()
     },[])
 
-    const filteredCoffees = 
-        coffees.filter((coffee) => (
-            coffee.name.toLowerCase().includes(searchTerm.toLowerCase())
-        ))
+    const filteredCoffees = coffees.filter(coffee => {
+        const cleanSearch = searchTerm.trim().toLowerCase();
+        if (!cleanSearch) return true;
+      
+        // Split the coffee name into separate words
+        const nameWords = coffee.name.toLowerCase().split(" ");
+      
+        // Check for the word that matches the search term
+        return nameWords.some(word => word.startsWith(cleanSearch));
+      })
 
     return(
         <div className="shop-container">
